@@ -1,0 +1,14 @@
+logging:
+    file:D:\lmn\lmnspringboot.log
+    #  编写除控制台输出之外的日志文件，则需在 application.properties 中设置 logging.file 或 logging.path 属性   
+    # 二者不能同时使用，如若同时使用，则只有 logging.file 生效
+    #  level:org.springframework:DEBUG
+spring:
+    data:
+        elasticsearch:
+            #cluster-name: #默认为elasticsearch
+            #cluster-nodes: 127.0.0.1: #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
+            properties:
+                path:
+                    logs: ./elasticsearch/log #elasticsearch日志存储目录
+                    data: ./elasticsearch/data #elasticsearch数据存储目录
